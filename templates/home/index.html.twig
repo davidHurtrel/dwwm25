@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}accueil{% endblock %}
+
+{% block description %}
+    Page d'accueil du site de démonstration pour le cours Symfony des DWWM25 de Philiance
+{% endblock %}
+
+{% block body %}
+
+    <div class="container p-5">
+
+        {{ form_start(contactForm) }}
+
+            <div class="row">
+
+                <div class="col-3 offset-3 mb-3">
+                    {{ form_row(contactForm.firstName, {
+                        'label': 'Prénom'
+                    }) }}
+                </div>
+
+                <div class="col-3 mb-3">
+                    {{ form_row(contactForm.lastName, {
+                        'label': 'Nom'
+                    }) }}
+                </div>
+
+                <div class="col-4 offset-3 mb-3">
+                    {{ form_row(contactForm.email, {
+                        'label': 'Email'
+                    }) }}
+                </div>
+
+                <div class="col-2 mb-3">
+                    {{ form_row(contactForm.age, {
+                        'label': 'Âge'
+                    }) }}
+                </div>
+
+                <div class="col-6 offset-3 mb-3">
+                    {{ form_row(contactForm.message, {
+                        'label': 'Message'
+                    }) }}
+                </div>
+
+                <div class="col-6 offset-3 mb-3">
+                    {{ form_row(contactForm.files, {
+                        'label': 'Fichier(s)'
+                    }) }}
+                </div>
+
+                <div class="col-6 offset-3 text-end">
+                    <input type="submit" value="Envoyer" class="btn btn-success">
+                </div>
+
+            </div>
+
+        {{ form_end(contactForm) }}
+
+    </div>
+
+{% endblock %}
