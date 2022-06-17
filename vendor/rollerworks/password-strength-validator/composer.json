@@ -1,0 +1,60 @@
+{
+    "name": "rollerworks/password-strength-validator",
+    "description": "Password-strength validator for Symfony",
+    "keywords": ["password", "validator", "symfony"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastiaan Stok",
+            "email": "s.stok@rollercapes.net"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/rollerworks/PasswordStrengthValidator/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "psr/container": "^1.0 || ^2.0",
+        "symfony/deprecation-contracts": "^2.4 || ^3.0",
+        "symfony/polyfill-mbstring": "^1.5.0",
+        "symfony/translation": "^4.4 || ^5.0 || ^6.0",
+        "symfony/validator": "^4.4 || ^5.0 || ^6.0"
+    },
+    "require-dev": {
+        "guzzlehttp/psr7": "^1.4",
+        "php-http/httplug": "^1.1",
+        "phpspec/prophecy": "^1.10.3",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.5",
+        "psr/log": "^1.0 || ^2.0",
+        "symfony/config": "^4.4 || ^5.0 || ^6.0",
+        "symfony/console": "^4.4 || ^5.0 || ^6.0",
+        "symfony/phpunit-bridge": "^5.3 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rollerworks\\Component\\PasswordStrength\\": "src/"
+        },
+        "exclude-from-classmap": ["test/"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rollerworks\\Component\\PasswordStrength\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.7-dev"
+        }
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
